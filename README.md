@@ -1,10 +1,6 @@
 # sentimany
 
-Just a simple sentiment tool. It just grabs a set of pre-made sentiment models that you can quickly use to attach sentiment scores to text. None of these sentiment models will be perfect, as none of them actually understand language, but they may serve well in human-in-the-loop kinds of labelling situations. Currently the tool only supports English models.
-
-- [vader](https://github.com/cjhutto/vaderSentiment)
-- [textblob](https://textblob.readthedocs.io/en/dev/quickstart.html)
-- [depeche mood](https://textacy.readthedocs.io/en/0.11.0/api_reference/datasets_resources.html#textacy.resources.depeche_mood.DepecheMood)
+Just a simple sentiment tool. It just grabs a set of pre-made sentiment models that you can quickly use to attach sentiment scores to text. None of these sentiment models will be perfect, as none of them actually understand language, but they may serve well in human-in-the-loop kinds of labelling situations. Currently the tool aims at English models, although some tools with also work on custom models.
 
 ```python
 import pandas as pd

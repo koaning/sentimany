@@ -1,6 +1,8 @@
 # sentimany
 
-Just a simple sentiment tool. It just grabs a set of pre-made sentiment models that you can quickly use to attach sentiment scores to text. None of these sentiment models will be perfect, as none of them actually understand language, but they may serve well in human-in-the-loop kinds of labelling situations. Currently the tool only supports English models.
+> Just a simple sentiment tool. 
+
+It just grabs a set of pre-made sentiment models that you can quickly use to attach sentiment scores to text. None of these sentiment models will be perfect, as none of them actually understand language, but they may serve well in human-in-the-loop kinds of labelling situations. Currently the tool only supports English models.
 
 ## Quickstart 
 
@@ -39,10 +41,10 @@ This would result in a table that looks something like;
 
 | text                     |   vader |   textblob |   imdb_onnx |   amazon_onnx |   roberta |   nlptown |
 |:-------------------------|--------:|-----------:|------------:|--------------:|----------:|----------:|
-| i like dogs              |  0.6806 |        0.5 |      0.5667 |        0.577  |    0.9979 |    0.7335 |
-| i hate cats              |  0.214  |        0.1 |      0.6835 |        0.3837 |    0.0016 |    0.3544 |
-| stroopwafels are amazing |  0.793  |        0.8 |      0.7374 |        0.8058 |    0.9985 |    0.9323 |
-| mcdondals is horrible    |  0.2288 |        0   |      0.1983 |        0.1522 |    0.0006 |    0.0605 |
+| i like dogs              |  0.6806 |        0.5 |      0.5667 |        0.5770 |    0.9979 |    0.7335 |
+| i hate cats              |  0.2140 |        0.1 |      0.6835 |        0.3837 |    0.0016 |    0.3544 |
+| stroopwafels are amazing |  0.7930 |        0.8 |      0.7374 |        0.8058 |    0.9985 |    0.9323 |
+| mcdondals is horrible    |  0.2288 |        0.0 |      0.1983 |        0.1522 |    0.0006 |    0.0605 |
 
 ## Good to know 
 

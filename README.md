@@ -27,22 +27,22 @@ df = pd.DataFrame({"text": texts})
 
 # Apply each sentiment model and attach it as a new column
 (df
-  .assign(sent_vader = lambda d: vader_sentiment(d['text']), 
-          sent_textblob = lambda d: textblob_sentiment(d['text']),
-          sent_imdb_onnx = lambda d: onnx_sentiment(d['text'], "onnx/imdb-reviews.onnx"),
-          sent_amazon_onnx = lambda d: onnx_sentiment(d['text'], "onnx/amazon-reviews.onnx"),
-          sent_roberta = lambda d: roberta_sentiment(d['text']), 
-          sent_nlptown = lambda d: nlptown_sentiment(d['text'])))
+  .assign(vader = lambda d: vader_sentiment(d['text']), 
+          textblob = lambda d: textblob_sentiment(d['text']),
+          imdb_onnx = lambda d: onnx_sentiment(d['text'], "onnx/imdb-reviews.onnx"),
+          amazon_onnx = lambda d: onnx_sentiment(d['text'], "onnx/amazon-reviews.onnx"),
+          roberta = lambda d: roberta_sentiment(d['text']), 
+          nlptown = lambda d: nlptown_sentiment(d['text'])))
 ```
 
 This would result in a table that looks something like; 
 
-|    | text                     |   sent_vader |   sent_textblob |   sent_imdb_onnx |   sent_amazon_onnx |   sent_roberta |   sent_nlptown |
-|---:|:-------------------------|-------------:|----------------:|-----------------:|-------------------:|---------------:|---------------:|
-|  0 | i like dogs              |      0.6806  |             0.5 |         0.566716 |           0.576971 |    0.997911    |      0.733527  |
-|  1 | i hate cats              |      0.21405 |             0.1 |         0.683531 |           0.383669 |    0.00162992  |      0.354395  |
-|  2 | stroopwafels are amazing |      0.79295 |             0.8 |         0.737425 |           0.805838 |    0.998491    |      0.932349  |
-|  3 | mcdondals is horrible    |      0.22885 |             0   |         0.198283 |           0.152206 |    0.000595081 |      0.0605446 |
+| text                     |   vader |   textblob |   imdb_onnx |   amazon_onnx |   roberta |   nlptown |
+|:-------------------------|--------:|-----------:|------------:|--------------:|----------:|----------:|
+| i like dogs              |  0.6806 |        0.5 |      0.5667 |        0.577  |    0.9979 |    0.7335 |
+| i hate cats              |  0.214  |        0.1 |      0.6835 |        0.3837 |    0.0016 |    0.3544 |
+| stroopwafels are amazing |  0.793  |        0.8 |      0.7374 |        0.8058 |    0.9985 |    0.9323 |
+| mcdondals is horrible    |  0.2288 |        0   |      0.1983 |        0.1522 |    0.0006 |    0.0605 |
 
 ## Good to know 
 

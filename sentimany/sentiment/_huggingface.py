@@ -12,16 +12,17 @@ _star_mapping = {
 def _translate_preds(d):
     return sum([_star_mapping[s['label']] * s['score'] for s in d])
 
+_roberta_sentiment = pipeline("sentiment-analysis", 
+                              model="siebert/sentiment-roberta-large-english")
+
+_nlp_town_sentiment = pipeline("sentiment-analysis", 
+                               model="nlptown/bert-base-multilingual-uncased-sentiment")
 
 def roberta_sentiment(texts):
-    sentiment_analysis = pipeline("sentiment-analysis", 
-                                  model="siebert/sentiment-roberta-large-english")
-    scores = sentiment_analysis(list(texts), return_all_scores=True)
+    scores = _roberta_sentiment(list(texts), return_all_scores=True)
     return [[i['score'] for i in s if i['label'] == 'POSITIVE'][0] for s in scores]
 
 
 def nlptown_sentiment(texts):
-    sentiment_analysis = pipeline("sentiment-analysis", 
-                                  model="nlptown/bert-base-multilingual-uncased-sentiment")
-    scores = sentiment_analysis(list(texts), return_all_scores=True)
+    scores = _nlp_town_sentiment(list(texts), return_all_scores=True)
     return [_translate_preds(s) for s in scores]

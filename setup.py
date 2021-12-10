@@ -7,6 +7,8 @@ base_packages = [
     "vaderSentiment==3.3.2",
     "textblob==0.17.1",
     "pandas>=1.3.3",
+    "skl2onnx==1.10.0",
+    "onnxruntime==1.9.0"
 ]
 
 docs_packages = [

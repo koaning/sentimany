@@ -46,8 +46,18 @@ This would result in a table that looks something like;
 | stroopwafels are amazing |  0.7930 |        0.8 |      0.7374 |        0.8058 |    0.9985 |    0.9323 |
 | mcdondals is horrible    |  0.2288 |        0.0 |      0.1983 |        0.1522 |    0.0006 |    0.0605 |
 
+## Install
+
+This tool is a bit of a hack, but you can install it via pip using git.
+
+```
+python -m pip install "sentimany @ git+https://github.com/koaning/sentimany.git"
+```
+
+If you'd like to use the pretrained `onnx` models (these are made with [sklearn-onnx](http://onnx.ai/sklearn-onnx/)) you can download them manually from the `onnx` folder of this repo.
+
 ## Good to know 
 
-This is a repo made for utility for myself. Feel free to re-use, but don't expect maintenance in the long term. 
+This is a repo made for utility for myself. It's made in an evening. Feel free to re-use, but don't expect maintenance or production-quality code in the long term. 
 
 More-over though, keep in mind that sentiment models are imperfect and brittle. In particular check [this short blogpost](https://koaning.io/til/2021-09-27-sentiment/) and [this huggingface stream](https://www.youtube.com/watch?v=0K5ybetv-dA&ab_channel=HuggingFace) for more details.

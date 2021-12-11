@@ -56,8 +56,8 @@ python -m pip install "sentimany @ git+https://github.com/koaning/sentimany.git"
 
 If you'd like to use the pretrained `onnx` models (these are made with [sklearn-onnx](http://onnx.ai/sklearn-onnx/)) you can download them manually from the `onnx` folder of this repo.
 
-## Good to know 
+## Fair Warning
 
-This is a repo made for utility for myself. It's made in an evening. Feel free to re-use, but don't expect maintenance or production-quality code in the long term. 
+I like to build in public but I should stress that this is a repo made for utility for myself. Honestly, it's made in a quick evening. Feel free to re-use, but don't expect maintenance or production-quality code in the long term. 
 
 More-over though, keep in mind that sentiment models are imperfect and brittle. In particular check [this short blogpost](https://koaning.io/til/2021-09-27-sentiment/) and [this huggingface stream](https://www.youtube.com/watch?v=0K5ybetv-dA&ab_channel=HuggingFace) for more details.
